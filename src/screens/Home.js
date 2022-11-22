@@ -1,17 +1,13 @@
-import styled from "styled-components";
-import { isLoggedInVar } from "../apollo";
+import { useNavigate } from "react-router-dom";
+import { logUserOut } from "../apollo";
 
-const Title = styled.h1`
-    color: ${(props) => props.theme.fontColor};
-`;
-
-const Container = styled.div``;
 function Home() {
+    const navigate = useNavigate();
     return (
-        <Container>
-        <Title>Hello Nico</Title>
-        <button onClick={() => isLoggedInVar(false)}>Logout</button>
-        </Container>
+        <div>
+        <h1>Welcome to Nomad Coffee</h1>
+        <button onClick={() => logUserOut(navigate)}>Logout</button>
+        </div>
     );
 }
 export default Home;
