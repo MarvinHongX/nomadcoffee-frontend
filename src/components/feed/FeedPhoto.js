@@ -54,10 +54,6 @@ const PhotoAction = styled.div`
     cursor: pointer;
 `;
 
-const Likes = styled(FatText)`
-    margin-top: 15px;
-    display: block;
-`;
 
 function FeedPhoto({user, id, slug, name, url}){
     //const isLiked = false;
