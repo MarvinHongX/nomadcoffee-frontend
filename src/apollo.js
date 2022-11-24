@@ -33,10 +33,12 @@ export const enableDarkMode = () => {
   };
   
   const httpLink = createHttpLink({
-    uri: 
+    uri: "https://marvincoffee.herokuapp.com/graphql",
+    /*
       process.env.NODE_ENV === "productiono" 
         ? "https://marvincoffee.herokuapp.com/graphql"
         : "http://localhost:4000/graphql",
+    */
   });
 
   const authLink = setContext((_, { headers }) => {
