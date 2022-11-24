@@ -133,7 +133,7 @@ function Shop() {
         onCompleted,
         update: updateShop
     });
-    const onSubmitValid = (data) => {
+    const onSubmitValid = (_) => {
         if (loading) {
             return;
         }

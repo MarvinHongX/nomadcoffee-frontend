@@ -56,7 +56,6 @@ const PhotoAction = styled.div`
 
 
 function FeedPhoto({user, id, slug, name, url}){
-    //const isLiked = false;
     const isLiked = true;
     const { data: userData} = useUser();
     return (
