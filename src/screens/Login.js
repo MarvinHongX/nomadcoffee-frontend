@@ -3,7 +3,7 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { logUserIn } from "../apollo";
 import AuthBottomBox from "../components/auth/AuthBottomBox";
@@ -13,7 +13,7 @@ import AuthHeaderContainer from "../components/auth/AuthHeaderContainer";
 import AuthInput from "../components/auth/AuthInput";
 import AuthLayout from "../components/auth/AuthLayout";
 import AuthSeparator from "../components/auth/AuthSeparator";
-import AuthFormError from "../components/auth/AutoFormError";
+import AuthFormError from "../components/auth/AuthFormError";
 import PageTitle from "../components/PageTitle";
 import routes from "./routes";
 
@@ -45,6 +45,7 @@ const LOGIN_MUTATION = gql`
 
 
 function Login() {
+    const navigate = useNavigate();
     const location = useLocation();
     const { register, handleSubmit, formState, getValues, setError, clearErrors } = useForm({
         mode: "onChange",
@@ -65,6 +66,7 @@ function Login() {
         if (token) {
             logUserIn(token);
         }
+        navigate(location?.pathname || routes.home);
       };
       const [login, { loading }] = useMutation(LOGIN_MUTATION, {
         onCompleted,

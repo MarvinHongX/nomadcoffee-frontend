@@ -1,5 +1,4 @@
 import { gql, useMutation } from "@apollo/client";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ import AuthHeaderContainer from "../components/auth/AuthHeaderContainer";
 import AuthInput from "../components/auth/AuthInput";
 import AuthLayout from "../components/auth/AuthLayout";
 import AuthSeparator from "../components/auth/AuthSeparator";
-import AuthFormError from "../components/auth/AutoFormError";
+import AuthFormError from "../components/auth/AuthFormError";
 import PageTitle from "../components/PageTitle";
 import { FatLink } from "../components/shared";
 import routes from "./routes";
