@@ -17,6 +17,7 @@ import Layout from "./components/Layout";
 import Shop from "./screens/Shop";
 import Add from "./screens/Add";
 import ShopWelcome from "./screens/ShopWelcome";
+import User from "./screens/User";
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
             path={routes.signUp} 
             element={<SignUp />}
           />) : null}
+        <Route 
+          path={routes.user}
+          element={<User />}
+        />
         <Route 
           path={routes.shop}
           element={<Shop />}

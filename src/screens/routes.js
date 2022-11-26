@@ -4,6 +4,7 @@ const routes = {
     add: "/add",
     shop: `/shop/:id`,
     shopWelcome: "/Shop-Welcome",
+    user: `/user/:username`,
 };
 
 export default routes;

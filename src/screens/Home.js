@@ -30,7 +30,9 @@ export const SEE_COFFEE_SHOPS_QUERY = gql`
     }
 `;
 
+
 function Home() {
+    //const [page, setPage] = useState(1);
     const page = 1;
     const photosPage = 1;
     const { data } = useQuery(SEE_COFFEE_SHOPS_QUERY, {
@@ -39,6 +41,9 @@ function Home() {
             photosPage
         },
     });
+
+  
+
     return (
         <div>
         <PageTitle title="Home"/>

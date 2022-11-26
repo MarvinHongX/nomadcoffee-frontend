@@ -62,10 +62,10 @@ function FeedPhoto({user, id, slug, name, url}){
         <PhotoContainer key={id}>
             <PhotoHeader>
 
-                <Link to={`/users/${user.username}`}>
-                    <Avatar lg url={user.avatar} />
+                <Link to={`/user/${user.username}`}>
+                    <Avatar lg url={user.avatarURL} />
                 </Link>
-                <Link to={`/users/${user.username}`}>
+                <Link to={`/user/${user.username}`}>
                     <Username>{user.username}</Username>
                 </Link>
                 {
